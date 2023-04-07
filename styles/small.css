@@ -17,7 +17,7 @@ body {
     top: 0.8rem;
     right: 15px;
     left: 15px;
-    background-color: #f2f2f2;
+    background-color: #fff;
     opacity: 0.9;
   }
 
@@ -37,7 +37,7 @@ body {
 
    h1 {
     font-family: 'Titan One', cursive;
-    color: #18742c;
+    color: #d9941d;
     font-size: 1.2rem;
    }
 
@@ -56,13 +56,13 @@ body {
 
   .topnav {
     overflow: hidden;
-    background-color: #18742c;
+    background-color: #d9941d;
   }
    
   .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -70,15 +70,15 @@ body {
   }
   
   .topnav a:hover {
-    background-color: #34a84d;
-    color: f2f2f2;
+    background-color: #f6b94f;
+    color: black;
     font-weight: bold;
-    border: 1px solid #f2f2f2;
+    border: 1px solid #fff;
   }
   
   .topnav a.active {
-    background-color: #34a84d;
-    color: #f2f2f2;
+    background-color: #f6b94f;
+    color: black;
   }
   
   .topnav .icon {
@@ -86,11 +86,11 @@ body {
   }
 
   main {
-    border: 1px solid #34a84d;
+    border: 1px solid #f6b94f;
   }
 
   footer {
-      border: 1px solid #34a84d;
+      border: 1px solid #f6b94f;
   }
   
   @media screen and (max-width: 600px) {
@@ -151,7 +151,7 @@ body {
   } 
    h1 {
     font-family: 'Titan One', cursive;
-    color: #18742c;
+    color: #d9941d;
     font-size: 1.9rem;
    }
 
