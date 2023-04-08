@@ -1,3 +1,13 @@
+:root {
+  --primary: #d9941d;;
+  --dark: black;
+  --light: #fff;
+  --soft: #f6b94f;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  }
+
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -17,7 +27,7 @@ body {
     top: 0.8rem;
     right: 15px;
     left: 15px;
-    background-color: #fff;
+    background-color: var(--light);
     opacity: 0.9;
   }
 
@@ -37,7 +47,8 @@ body {
 
    h1 {
     font-family: 'Titan One', cursive;
-    color: #d9941d;
+    color: var(--primary);
+    text-shadow: 2px 2px 8px #302f2f;
     font-size: 1.2rem;
    }
 
@@ -56,13 +67,13 @@ body {
 
   .topnav {
     overflow: hidden;
-    background-color: #d9941d;
+    background-color: var(--primary);
   }
    
   .topnav a {
     float: left;
     display: block;
-    color: black;
+    color: var(--dark);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -70,15 +81,15 @@ body {
   }
   
   .topnav a:hover {
-    background-color: #f6b94f;
-    color: black;
+    background-color: var(--soft);
+    color: var(--dark);
     font-weight: bold;
-    border: 1px solid #fff;
+    border: 1px solid var(--light);
   }
   
   .topnav a.active {
-    background-color: #f6b94f;
-    color: black;
+    background-color: var(--soft);
+    color: var(--dark);
   }
   
   .topnav .icon {
@@ -86,11 +97,11 @@ body {
   }
 
   main {
-    border: 1px solid #f6b94f;
+    border: 1px solid var(--soft);
   }
 
   footer {
-      border: 1px solid #f6b94f;
+      border: 1px solid var(--soft);
   }
   
   @media screen and (max-width: 600px) {
@@ -152,7 +163,136 @@ body {
    h1 {
     font-family: 'Titan One', cursive;
     color: #d9941d;
-    font-size: 1.9rem;
+    font-size: 2.25rem;
    }
 
   } 
+
+
+  .btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    }
+
+    img {
+    max-width: 100%;
+    }
+
+    .wrapper {
+    display: grid;
+    grid-gap: 20px;
+    }
+
+    .top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'showcase showcase top-box-a'
+        'showcase showcase top-box-b';
+    }
+
+    .showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(https://images.pexels.com/photos/2986/fruits-oranges-tangerines.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    }
+
+    .showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+    }
+
+    .showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+    }
+
+ 
+    .top-box {
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    }
+
+    .top-box .price {
+    font-size: 2.5rem;
+    }
+
+    .top-box-a {
+    grid-area: top-box-a;
+    }
+
+    .top-box-b {
+    grid-area: top-box-b;
+    }
+
+    .boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .box {
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+    }
+
+    .info {
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    }
+
+
+    /* Media Queries */
+    @media (max-width: 700px) {
+    .top-container {
+        grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    }
+
+    @media (max-width: 500px) {
+    .top-container {
+        grid-template-areas:
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    }
+    }
