@@ -32,8 +32,8 @@ async function apiFetch() {
 
   function displayResults(weatherData) {
     const now = new Date();
-    const numberDay = now.getDate();
-    const numberHour = now.getHours();
+    const currentDay = now.getDate();
+    const currentHour = now.getHours();
     
 
     const listArray = weatherData.list;
@@ -44,9 +44,9 @@ async function apiFetch() {
       const hourInListNext = parseInt(weatherData.list[j+1].dt_txt.substr(11,2));
       const dayInList = parseInt(weatherData.list[j].dt_txt.substr(8,2));
       
-      if (numberDay+counter == dayInList) {
-        if (numberHour >= hourInList && numberHour <= hourInListNext){
-          console.log(j,' ',numberDay,' ',numberHour,' ',dayInList,' ',hourInList,' ',counter);
+      if (currentDay+counter == dayInList && counter <= 3) {
+        if (currentHour >= hourInList && currentHour <= hourInListNext){
+          console.log(j,currentDay,currentDay+counter,currentHour,dayInList,hourInList,counter,'in');
 
           let card = document.createElement('section');
           let span1 = document.createElement('span');
@@ -58,7 +58,7 @@ async function apiFetch() {
           let monthInList = parseInt(weatherData.list[j].dt_txt.substr(5,2));
 
           var event = new Date(yearInList, monthInList-1, dayInList);
-          console.log(event.toDateString());
+          console.log(event.toDateString(),' ',weatherData.list[j].dt_txt);
           var dStrings = event.toString();
           var dArrays = dStrings.split(' ');
           var dateInList =  `${dArrays[0]}, ${dArrays[1]} ${dArrays[2]}`;
@@ -83,7 +83,7 @@ async function apiFetch() {
         }  
         
       }
-      console.log(j,' ',numberDay,' ',numberHour,' ',dayInList,' ',hourInList,' ',counter);
+      console.log(j,currentDay,currentDay+counter,currentHour,dayInList,hourInList,counter,'out');
     }
 
 

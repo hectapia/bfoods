@@ -7,3 +7,7 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+
+  let date = new Date();
+  let year = date.getFullYear();
+  document.getElementById('lastupdated').textContent = `Last updated: ${document.lastModified}`;  

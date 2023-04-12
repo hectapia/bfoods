@@ -100,6 +100,28 @@ body {
     border: 1px solid var(--soft);
   }
 
+  #city-name * {
+    font-size: 18px;
+  }
+
+  .owmCredit {
+    width: 100px;
+   }
+
+   .secondBlock {
+    display: flex;
+    align-items: center;
+   }
+
+   .secondBlock * {
+    padding: 10px;
+   }
+
+   article section {
+    display: flex;
+    align-items: center;
+   }
+
   footer {
       border: 1px solid var(--soft);
   }
@@ -186,6 +208,17 @@ body {
     grid-gap: 20px;
     }
 
+    .wrapper h4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      padding: 15px;
+      background: var(--primary);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
     .top-container {
     display: grid;
     grid-gap: 20px;
@@ -197,7 +230,7 @@ body {
     .showcase {
     grid-area: showcase;
     min-height: 400px;
-    background: url(https://images.pexels.com/photos/2986/fruits-oranges-tangerines.jpg);
+    background: url(https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg);
     background-size: cover;
     background-position: center;
     padding: 3rem;
@@ -211,6 +244,7 @@ body {
     .showcase h1 {
     font-size: 4rem;
     margin-bottom: 0;
+    padding: 10px;
     color: var(--light);
     }
 
@@ -242,10 +276,61 @@ body {
     grid-area: top-box-b;
     }
 
+    .top-box-a {
+    background: url(https://images.pexels.com/photos/8805083/pexels-photo-8805083.jpeg);
+    /*https://www.pexels.com/es-es/buscar/Healthy%20mix%20Juice/*/
+    background-size: cover;
+    background-position: center;
+    padding: 4px;
+    }
+
     .boxes {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+   .boxMixOne {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-carrot-pineapple-juice-with-ginger-2.jpeg?fit=728%2C921);
+    /* https://www.purewow.com/food/healthy-juice-recipes */
+  }
+
+    .boxMixTwo {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-beet-apple-carrot-orange-juice.jpeg?fit=728%2C921);
+    }
+
+    .boxMixThree {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-sparkling-pomegranate-juice.jpeg?fit=728%2C524);
+    }
+
+    .boxMixFour {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-homemade-green-juice-recipe-4.jpeg?fit=728%2C921);
+    }
+    
+    .boxMixFive {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-watermelon-juice-recipe-3.jpeg?fit=728%2C921);
+    }
+    
+    .boxMixSix {
+    background: url(https://publish.purewow.net/wp-content/uploads/sites/2/2021/10/healthy-juice-recipes-vitamin-boost-detox-juice-recipe-1.jpeg?fit=728%2C524);
+    }    
+
+    .boxMixOne, .boxMixTwo, .boxMixThree,
+    .boxMixFour, .boxMixFive, .boxMixSix {
+    background-size: cover;
+    background-position: center;
+    padding: 4px;
+    box-shadow: var(--shadow);
+    }
+
+    .boxes h4{
+      background-color: #fff;
+      opacity: 0.5;
+    }
+
+    .top-box-a h4{
+      background-color: #fff;
+      opacity: 0.5;
     }
 
     .box {
